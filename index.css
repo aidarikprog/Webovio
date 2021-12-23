@@ -1,0 +1,379 @@
+*{
+   box-sizing: border-box;
+}
+*, 
+*::before, 
+*::after{
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+} 
+.list-reset{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.btn-reset{
+   padding: 0;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+body{
+   font-family: 'Poppins', sans-serif;
+}
+img{
+   max-width: 100%;
+}
+.container{
+   max-width: 1140px;/* 1110 + 30 px */
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.link{
+   display: inline-flex;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+   text-decoration-line: none;
+   color: #D4D6D4;
+   /* что б полоска выходила за слово */
+   /* display: inline-block; */
+}
+.link svg{/* стрелка */
+   width: 17px;
+   height: 17px;
+   fill: currentColor;
+}
+.link span{
+   border-bottom: 1px solid currentColor;/* наследует цвет текста */
+   text-indent: 10px;
+}
+.link:hover{
+   color: #FFD723;}
+/* -------------hero */
+.header{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+}
+.header{
+   margin-top: 20px;
+}
+
+
+/* -----------------------------------------------burger */
+.burger{
+   --offset-horizontal: 11px;
+   --offset-vertical: 14px;
+   position: relative;
+   width: 40px;
+   height: 40px;
+   background: #F5F6F7;
+   border-radius: 50%;
+   padding: var(--offset-vertical) var(--offset);
+}
+.burger-line{
+   position: absolute;
+   left: 50%;
+   top: var(--offset-vertical);
+   background-color: #000;
+   display: inline-block;
+   width: calc(100% - (var(--offset-horizontal)*2));
+   height: 2px;
+   transform: translateX(-50%);
+}
+.burger-line:nth-child(2){
+   top:calc(var(--offset-vertical) + 6px)
+}
+.burger-line:nth-child(3){
+   top:calc(var(--offset-vertical) + 12px)
+}
+/* -------------------------------------------------------- */
+
+
+.header-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.hero{
+   background: url(./img/hero-bg.jpg) no-repeat center / cover;
+   padding-top: 180px;
+   padding-bottom: 210px;
+}
+.hero-content{
+   max-width: 616px;
+   color: white;
+}
+.hero-subtitle{
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 21px;
+}
+.hero-title{
+   font-weight: bold;
+   font-size: 60px;
+   line-height: 123%;
+   margin-bottom: 24px;
+}
+.hero-descr{
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 162%;
+   margin-bottom: 44px;
+}
+/* -----------------------------------services */
+.site-title{
+   font-weight: bold;
+font-size: 36px;
+line-height: 128%;
+}
+.services{
+   padding: 150px 0 50px;
+}
+.services-title{
+   max-width: 607px;
+   margin-bottom: 60px;
+}
+.services-list{
+   display: grid;
+   gap: 30px;/* отступы м\у колонками */
+   grid-template-columns: repeat(4, 1fr);/* 4 колонки по 1фр */
+}
+.services-subtitle{
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 142%;
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   max-width: 183px;
+}
+.services-descr{
+   max-width: 194px;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 186%;
+   color: rgba(33, 56, 66, 0.6);
+}
+.services-item{
+   display: flex;
+   flex-direction:column;
+   height: 255px;
+   align-items: flex-start;/* что б ссылка не была на всю строку */
+
+}
+.services-link{
+   margin-bottom: 0;
+   margin-top: auto;
+}
+/* ------------------------------------- */
+.footer{
+   background:url(./img/Bg.jpg)no-repeat center / cover;
+}
+.get-started{
+   position: relative;
+   top: 180px;
+   width: 88%;
+   background: #f6f6f6;
+   padding: 70px 0;
+   box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+
+}
+.get-started-title{
+   margin: 0;
+   max-width: 822px;
+   font-weight: bold;
+   font-size: 60px;
+   line-height: 123%;
+   color: #4D533C;
+   margin-bottom: 50px;
+}
+/* -----footer */
+.footer{
+   color: white;
+   padding-top: 300px;
+}
+
+
+/* footer top */
+.footer-top{
+   border-bottom: 2px solid #5D6544;
+   padding-bottom: 52px;
+}
+.footer-contacts-text{
+   display: block;/* что б стал блочным и был перенос слов */
+   font-size: 16px;
+line-height: 250%;
+color: #B6C197;
+margin-bottom: 8px;
+}
+.footer-top{
+   display: flex;
+   flex-wrap: wrap;
+}
+.footer-contacts-item:not(:last-child){
+margin-right: 68px;
+}
+.footer-contacts-link {
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 250%;
+   color: #FFFFFF;
+}
+.footer-contacts-value {
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 250%; 
+   color: #FFFFFF;
+   display: inline-block;
+}
+.footer-title{
+   font-weight: 600;
+font-size: 16px;
+line-height: 237%;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+.footer-link{
+   display: inline-block;
+   font-size: 16px;
+line-height: 250%;
+color: #B6C197;
+text-decoration: none;
+}
+.footer-middle{
+   padding-top: 60px;
+   display: grid;
+   gap: 70px;
+   grid-template-columns: repeat(4, 1fr);
+   border-bottom: 2px solid #5D6544;
+   padding-bottom: 60px;
+}
+
+.footer-mail{
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 158%;
+   color: #FFFFFF;
+   text-decoration: none;
+   margin-bottom: 24px;
+}
+.footer-text{
+   font-size: 16px;
+line-height: 162%;
+color: #B6C197;
+padding-bottom: 20px;
+}
+.social-link{/* общие для иконок */
+   display: block;
+width: 33px;
+height: 33px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.social{
+   display: flex;
+   align-items: center;
+   margin-top: 24px;
+}
+.social-link-fb{
+   background: url(./img/facebook_icon-icons.com_59205.svg);
+}
+.social-link-tw{
+   background: url(./img/Twitter_icon-icons.com_66803.svg);
+}
+.social-link-g{
+   background: url(./img/Google_Chrome_icon-icons.com_66794.svg);
+}
+.social-link-in{
+   background: url(./img/LINKEDIN_icon-icons.com_65488.svg);
+}
+.social-item{
+   margin-right: 10px;
+}
+.footer-bottom{
+   display: flex;
+   padding: 30px 0;
+   align-items: center;
+   justify-content: space-between;
+}
+.copyright{
+   font-size: 14px;
+   line-height: 21px;
+   color: #B5C096;
+}
+@media (max-width: 992px){
+   .services-list{
+      gap: 50px;/* отступы м\у колонками */
+      grid-template-columns: repeat(2, 1fr);/* 4 колонки по 1фр */
+   }
+   .services-subtitle{
+      max-width: none;
+   }
+   .services-descr{
+      max-width: none;
+   }
+   .footer-middle{
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .get-started-title {
+      margin: 0;
+      max-width: 822px;
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 100%;
+      color: #4D533C;
+      margin-bottom: 20px;
+   }
+   .footer-bottom{
+      display: flex;
+      flex-direction: column;
+   }
+   .footer-bottom a{
+      margin-bottom: 10px;
+   }
+}
+
+@media (max-width: 576px){
+   .footer-middle{
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+@media (max-width: 375px){
+   .hero-title{
+      font-size: 30px;
+      line-height: 78%;
+   }
+   .services{
+      padding: 50px 0 50px;
+   }
+}
+@media (max-width: 320px){
+   .footer-mail{
+      font-size: 20px;
+   }
+   .footer-bottom{
+      display: flex;
+      flex-direction: column;
+   }
+   .footer-bottom a{
+      margin-bottom: 10px;
+   }
+   .get-started-title{
+      font-size: 22px;
+   }
+   .services-item{
+      margin-bottom: 25px;
+   }
+   .services-descr{
+      margin-bottom: 10px;
+   }
+   .site-title{
+      font-size: 22px;
+   } 
+}
